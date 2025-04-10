@@ -1,0 +1,504 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Roboto, Arial, 'sans-serif';
+}
+
+body{
+    background-color: rgb(15, 15, 15);
+    color: #f1f1f1;
+}
+
+/*CABEÇALHO*/
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    background-color: rgb(15, 15, 15);
+    width: 99vw;
+    top: 0;
+}
+
+header div{/*todas as divs do header*/
+    display: flex;
+    align-items: center;
+}
+
+header .menu{/*botao de menu*/
+    font-size: calc(2rem - 7px);
+    cursor: pointer;
+    margin: 0px 10px 0px 10px;
+    border-radius: 50%;
+    padding: 8px 8px 5px 8px;
+    transition: 0.2s ease-in-out;
+}
+
+.logo{/*Logotipo*/
+    width: 110px;
+}
+
+.div-search{
+    position: relative;
+}
+
+.bi-keyboard-fill{/*imagem de teclado*/
+    position: absolute;
+    right: 130px;
+    font-size: calc(2rem - 7px);
+    color: rgb(143, 141, 141);
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.bi-keyboard-fill:hover{
+    color:#c0bebe ;
+}
+
+.pesquisa{/*barra de pesquisa*/
+    width: 550px;
+    height: 35px;
+    padding: 20px;
+    background: none;
+    border: 1px solid rgb(71, 71, 71);
+    border-radius: 50px 0px 0px 50px;
+    font-size: 1rem;
+    color: #f1f1f1;
+}
+
+.search{/*botão de pesquisa*/
+    width: 60px;
+    height: 42px;
+    border: 1px solid rgb(71, 71, 71);
+    border-radius: 0px 50px 50px 0px;
+    font-size: 1rem;
+    text-align: center;
+    background-color: #303030;
+    color: #f1f1f1;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.mic{/*icone de microfone*/
+    color: #f1f1f1;
+    border: none;
+    background-color: #303030;
+    border-radius: 50%;
+    padding: 10px 10px 8px 8px;
+    width: 40px;
+    height: 40px;
+    margin-left:10px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+     
+}
+
+.cam:hover, .sino:hover, header .menu:hover, .search:hover, .mic:hover{
+    background-color:#71717170 ;
+}
+
+.cam, .sino{
+    color: #f1f1f1;
+    border: none;
+    background-color: transparent;
+    font-size: calc(2rem - 4px);
+    margin: 0px 10px;
+    border-radius: 50%;
+    padding: 10px 10px 10px 10px;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.cam{
+    padding: 7px 10px 3px 10px;
+}
+
+.sino{
+    font-size: calc(1rem + 4px);
+}
+
+.profile-eu{
+    border-radius: 50%;
+    width: 35px;
+    margin: 0px 20px 0px 10px;
+    cursor: pointer;
+}
+
+.bi-three-dots-vertical{
+    display: none;
+}
+
+/*conteudo*/
+
+main{
+    display: flex;
+}
+
+article{
+    width: 887px;
+    margin-top: 70px;
+}
+
+.video iframe{/*video principal*/
+    width: 853px; 
+    height: 480px;
+    margin: 20px 20px 15px 35px;
+    border-radius: 15px;
+}
+
+.conteiner{/*a div que abraça todas abaixo do video*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.video h1{/*titulo do video */
+    margin-left: 35px;
+    font-weight: 700;
+}
+
+.inscritos-box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+.video .inscritos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.video .inscritos h5{
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.video .inscritos h6{
+    font-weight: 100;
+    color: gray;
+    font-size: calc(1rem - 5px);
+}
+
+.video img{/*vlogo da DIO*/
+    margin: 10px 10px 20px 35px;
+}
+
+.inscrever{/*botão de inscreva-se*/
+    margin-left: 20px;
+    height: 35px;
+    width: 120px;
+    border-radius: 30px;
+    font-weight: 500;
+    font-size: calc(1rem - 2px);
+    border: none;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.inscrever:hover{
+    background-color: rgb(207, 206, 206);
+}
+
+.buttons{
+    display: flex;
+}
+
+.like{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    padding: 10px;
+    width: 70px;
+    height: 35px;
+    border: none;
+    color: #f1f1f1;
+    border-radius: 35px 0px 0px 35px;
+    background-color: #7171714d;
+    cursor: pointer;
+}
+
+.like span{
+    margin-right: 10px;
+}
+
+.deslike{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    padding: 10px;
+    width: 50px;
+    height: 35px;
+    border: none;
+    color: #f1f1f1;
+    border-left: 1px solid gray ;
+    border-radius: 0px 35px 35px 0px;
+    background-color: #7171714d;
+    cursor: pointer;
+}
+
+.share{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    padding: 10px;
+    width: 130px;
+    height: 35px;
+    border: none;
+    color: #f1f1f1;
+    border-radius:35px;
+    background-color: #7171714d;
+    cursor: pointer;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.share i{
+    margin-left: 10px;
+}
+
+.more{
+    display: block;
+    border-radius: 50%;
+    padding: 7px;
+    width: 35px;
+    height: 35px; 
+    border: none;
+    cursor: pointer;
+    color: #f1f1f1;
+    background-color: #7171714d;
+}
+
+.like-div{
+    display: flex;
+}
+
+
+
+.like:hover, .deslike:hover, .share:hover, .more:hover{
+    background-color: #4d4c4c;
+}
+
+.description{/*descrição*/
+    background-color: #7171714d;
+    margin-left: 35px;
+    padding: 10px 20px;
+    border-radius: 15px;
+    height: 100px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+ 
+.description h5, .mais{
+    font-size: calc(1rem - 2px);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.mais{
+    margin-top: 7px;
+}
+
+.description h5 span{
+    color: gray;
+    padding-left: 5px;
+}
+
+
+.description .text{
+    font-size:calc(1rem - 1px) ;
+}
+
+.description .text a{
+    text-decoration: none;
+    color: rgb(60, 161, 255);
+}
+
+/*comentários*/
+
+.coments{
+    margin: 10px 0px 0px 35px;
+    width: 853px;
+}
+
+.comentarios{
+    display: flex;
+    align-items: center;
+}
+
+.comentarios h2{
+    font-size: calc(2rem - 12px);
+    margin: 15px 30px 20px 0px;
+}
+
+.comentarios i{
+    margin-right: 10px;
+    font-size: calc(1rem + 5px);
+}
+
+.comentar{
+    display: flex;
+}
+
+.profile{
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    margin: 0px 20px 0px 10px;
+    cursor: pointer;
+}
+
+.comentar input{
+    display: block;
+    width: 100%;
+    margin-right: 20px;
+    border: none;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.644);
+    background-color: transparent;
+    padding-left: 5px;
+    color:#f1f1f1;
+}
+
+.comentario{
+    display: flex;
+    margin-top: 30px;
+}
+
+.comentario .profile{
+    height: 45px;
+}
+
+.conteiner-2{
+    display: flex;
+    flex-direction: column;
+}
+
+.user{
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.user p{
+    color: gray;
+    font-size: calc(1rem - 4px);
+    margin-left: 5px;
+}
+
+.react{
+    display: flex;
+    align-items: center;
+}
+
+.react .like, .react .deslike{
+    background-color: transparent;
+    margin: 0px;
+    border: none;
+    font-size: 1rem;
+    border-radius: 50%;
+    transition: 0.2s ease-in-out;
+    width: 44px;
+    height: 44px;
+}
+
+
+.react .like:hover, .react .deslike:hover, .react .responder:hover{
+    background-color: #7171714d;
+}
+
+.responder{
+    background-color: transparent;
+    border: none;
+    border-radius: 30px;
+    color: #f1f1f1;
+    width: 90px;
+    height: 30px;
+    cursor: pointer;
+}
+
+/*barra lateral*/
+
+aside{
+    float: right;
+    margin-top: 70px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+
+.topicos button{
+    border: none;
+    color: #f1f1f1;
+    background-color: #71717134;
+    padding: 10px;
+    border-radius: 7px;
+    margin: 4px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    font-weight: 600;
+}
+
+.topicos .primeiro{
+    color: black;
+    background-color: #f1f1f1;
+}
+
+.recomendado{
+    display: flex;
+    margin-top: 20px ;
+    margin-right: 50px;
+    cursor: pointer;
+}
+
+.logo-da-dio{
+    display: none;
+}
+
+.recomendado > img{
+    border-radius: 7px;
+    margin-right: 10px;
+    height: 90px;
+    width: 160px;
+}
+
+.desc-recomendado h5{
+    margin-bottom: 10px;
+}
+
+.desc-recomendado p{
+    margin-bottom: 10px;
+    font-size: calc(1rem - 4px);
+    color: gray;
+}
+
+/*Responsividade para celular*/
+
+@media only screen and (max-width: 600px){
+
+    header{
+        display: flex;
+        align-items: center;
+        justify-content:space-around;
+        position: fixed;
+        background-color: rgb(15, 15, 15);
+        width: 99vw;
+        top: 0;
+    }
+    
+    header div{/*todas as divs do header*/
+        display: flex;
+        align-items: center;
+    }
+    
+    header .menu{/*botao de menu*/
+        display: none;
+    }
+    
+    .logo{/*Logotipo*/
+        width: 100px;
+        margin-left: 5vw;
+    }
+    
+}
